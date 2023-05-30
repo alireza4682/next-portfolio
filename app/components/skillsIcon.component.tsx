@@ -1,7 +1,6 @@
 import Image, { ImageLoaderProps } from "next/image";
 
 const imageLoader = ({ src, width, quality }: ImageLoaderProps) => {
-  "use server";
   return `/library/${src}.svg`;
 };
 

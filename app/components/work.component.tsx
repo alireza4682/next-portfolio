@@ -1,3 +1,4 @@
+"use client";
 import { useEffect } from "react";
 
 type Twork = {
@@ -8,10 +9,10 @@ type Twork = {
 
 const Work = (props: Twork) => {
   const { heading, content, logos } = props;
-  useEffect(()=>{
-    const logos2 = logos.map(async (l)=>await import(`./library/${l}.svg`))
-    console.log(logos2)
-  },[])
+  useEffect(() => {
+    const logos2 = logos.map(async (l) => await import(`./library/${l}.svg`));
+    console.log(logos2);
+  }, []);
 
   return (
     <div>

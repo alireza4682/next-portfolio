@@ -1,52 +1,12 @@
-"use client";
-import Image, { ImageLoaderProps } from "next/image";
+import Image from "next/image";
 import me from "../../public/me.jpg";
 import Link from "next/link";
-import { useTheme } from "next-themes";
-
-// const preferedStack = [
-//   "nextjs",
-//   "typescript",
-//   "react",
-//   "tailwindcss",
-//   "redux",
-//   "prisma",
-// ];
-
-// const imageLoader = ({ src, width, quality }: ImageLoaderProps) => {
-//   return `/library/${src}.svg`;
-// };
-
-//  {preferedStack.map((i, idx) => {
-//     const element = preferedStack[idx];
-//     return (
-//       <div
-//         key={i}
-//         className="rounded-full flex w-16 h-16 bg-white m-2 self-center justify-self-center p-1"
-//       >
-//         <Image
-//           loader={imageLoader}
-//           src={`${element}`}
-//           alt={`${element}Logo`}
-//           className="p-0.5 object-contain"
-//           width={64}
-//           height={64}
-//           priority={false}
-//         />
-//       </div>
-//     );
-//   })}
 
 const Intro = () => {
   const onDownloadClick = () => {
     return window.open(
       "https://drive.google.com/file/d/1c4YzROM0sbDlhzPA35C_i77JyznRayf6/view?usp=share_link"
     );
-  };
-
-  const { theme, setTheme } = useTheme();
-  const darkModeHandler = () => {
-    theme === "dark" ? setTheme("light") : setTheme("dark");
   };
 
   return (
