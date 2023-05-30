@@ -1,14 +1,9 @@
 import Image from "next/image";
 import me from "../../public/me.jpg";
 import Link from "next/link";
+import CvDownload from "./cvDownload.component";
 
 const Intro = () => {
-  const onDownloadClick = () => {
-    return window.open(
-      "https://drive.google.com/file/d/1c4YzROM0sbDlhzPA35C_i77JyznRayf6/view?usp=share_link"
-    );
-  };
-
   return (
     <div className="flex flex-col h-auto md:w-1/3 bg-white text-black dark:bg-black dark:text-white items-center">
       <div className=" flex w-64 h-64 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 justify-center items-center m-4">
@@ -24,12 +19,6 @@ const Intro = () => {
       <div className="text-sm">
         Frontend engineer with 5+ years of experience
       </div>
-      <button
-        className="bg-white text-black p-1.5 rounded-md m-2"
-        onClick={() => onDownloadClick()}
-      >
-        download CV.pdf
-      </button>
       <div className="m-4">
         5+ years of experience in JavaScript and 3+ years of experience in
         Reactjs, TypeScript, Redux and RESTful APIs. 2+ years of experience
@@ -37,6 +26,7 @@ const Intro = () => {
         in cross functional environment 2+ years of test driven development. 1+
         year of experience working with Nodejs and Expressjs
       </div>
+      <CvDownload />
       <div className="w-4/5">
         <div className="text-center">prefered stack:</div>
         <div className="p-1 border-2 border-white rounded-lg grid grid-cols-3 m-2 ">

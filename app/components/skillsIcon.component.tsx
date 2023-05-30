@@ -1,9 +1,5 @@
 import Image, { ImageLoaderProps } from "next/image";
 
-const imageLoader = ({ src, width, quality }: ImageLoaderProps) => {
-  return `/library/${src}.svg`;
-};
-
 const SkillsIcon = ({ svgIcon, name }: { svgIcon: string; name: string }) => {
   return (
     <div
@@ -11,8 +7,7 @@ const SkillsIcon = ({ svgIcon, name }: { svgIcon: string; name: string }) => {
                   flex flex-row justify-between min-w-fit w-fit gap-2 items-center rounded-2xl "
     >
       <Image
-        loader={imageLoader}
-        src={svgIcon}
+        src={`/library/${svgIcon}.svg`}
         width={64}
         height={64}
         alt="typescriptLogo"
