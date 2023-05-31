@@ -1,9 +1,9 @@
 import Image, { ImageLoaderProps } from "next/image";
 
-const SkillsIcon = ({ svgIcon, name }: { svgIcon: string; name: string }) => {
+const SkillsIcon = ({ svgIcon }: { svgIcon: string }) => {
   return (
     <div
-      className="bg-gray-200 p-1 px-2 m-1 
+      className="bg-gray-400 p-2 px-4 m-1 
                   flex flex-row justify-between min-w-fit w-fit gap-2 items-center rounded-2xl "
     >
       <Image
@@ -11,9 +11,8 @@ const SkillsIcon = ({ svgIcon, name }: { svgIcon: string; name: string }) => {
         width={64}
         height={64}
         alt="typescriptLogo"
-        className="bg-white/0 text-black p-1.5 rounded-md w-16 h-16"
       />
-      <div className="px-1">{name}</div>
+      <div className="px-1 text-blue-800">{svgIcon}</div>
     </div>
   );
 };
