@@ -1,4 +1,4 @@
-import Image, { ImageLoaderProps } from "next/image";
+import Image from "next/image";
 
 const SkillsIcon = ({ svgIcon }: { svgIcon: string }) => {
   return (
@@ -10,7 +10,7 @@ const SkillsIcon = ({ svgIcon }: { svgIcon: string }) => {
         src={`/library/${svgIcon}.svg`}
         width={64}
         height={64}
-        alt="typescriptLogo"
+        alt={svgIcon}
       />
       <div className="px-1 text-blue-800">{svgIcon}</div>
     </div>

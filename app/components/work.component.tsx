@@ -1,5 +1,4 @@
-"use client";
-import { useEffect } from "react";
+import Image from "next/image";
 
 type Twork = {
   heading: string;
@@ -9,10 +8,6 @@ type Twork = {
 
 const Work = (props: Twork) => {
   const { heading, content, logos } = props;
-  useEffect(() => {
-    const logos2 = logos.map(async (l) => await import(`./library/${l}.svg`));
-    console.log(logos2);
-  }, []);
 
   return (
     <div>
@@ -23,9 +18,16 @@ const Work = (props: Twork) => {
         ))}
       </div>
       <div>
-        {logos.map((l, idx) => {
-          // const logoToRender = modules[`./library/${l}.svg`];
-          return <img src={`./library/${l}.svg`} alt={l} key={idx} />;
+        {logos.map((l, _) => {
+          return (
+            <Image
+              src={`/library/${l}.svg`}
+              width={64}
+              height={64}
+              alt={l}
+              key={l}
+            />
+          );
         })}
       </div>
     </div>
