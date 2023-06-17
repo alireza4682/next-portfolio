@@ -1,24 +1,19 @@
+"use client";
 import { useTheme } from "next-themes";
-import { Switch } from "./ui/switch";
+import { MoonIcon } from "lucide-react";
+import { SunDim } from "lucide-react";
 
 const DarkButton = () => {
   const { theme, setTheme } = useTheme();
 
-  const darkModeHandler = () => {
-    if (theme === "dark") {
-      setTheme("light");
-    } else if (theme === "light") {
-      setTheme("dark");
-    }
-  };
-  const checkedHandler = () => {
-    if (theme === "dark") {
-      return true;
-    } else if (theme === "light") {
-      return false;
-    }
-  };
-  return <Switch onCheckedChange={() => darkModeHandler()} />;
+  return (
+    <button
+      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+      className="border rounded-md w-6 h-6 flex items-center justify-center"
+    >
+      {theme !== "dark" ? <MoonIcon /> : <SunDim />}
+    </button>
+  );
 };
 
 export default DarkButton;
