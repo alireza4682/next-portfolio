@@ -1,25 +1,24 @@
 import { useTheme } from "next-themes";
 import { Switch } from "./ui/switch";
-import { useState } from "react";
 
 const DarkButton = () => {
   const { theme, setTheme } = useTheme();
-  const initialTheme = false;
-  const [booleanTheme, setBooleanTheme] = useState(initialTheme);
-  console.log(initialTheme);
 
   const darkModeHandler = () => {
     if (theme === "dark") {
       setTheme("light");
-      setBooleanTheme(false);
-    } else {
+    } else if (theme === "light") {
       setTheme("dark");
-      setBooleanTheme(true);
     }
   };
-  return (
-    <Switch checked={booleanTheme} onCheckedChange={() => darkModeHandler()} />
-  );
+  const checkedHandler = () => {
+    if (theme === "dark") {
+      return true;
+    } else if (theme === "light") {
+      return false;
+    }
+  };
+  return <Switch onCheckedChange={() => darkModeHandler()} />;
 };
 
 export default DarkButton;
