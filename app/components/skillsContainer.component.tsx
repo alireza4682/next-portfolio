@@ -12,7 +12,7 @@ const SkillsContainer = ({
       <h1 className="font-semibold m-1">{section} :</h1>
       <div className="m-1 flex flex-wrap items-center justify-center">
         {skill.map((s, _) => {
-          return <SkillsIcon svgIcon={s} />;
+          return <SkillsIcon svgIcon={s} key={s} />;
         })}
       </div>
     </div>

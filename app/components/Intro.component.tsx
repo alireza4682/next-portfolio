@@ -15,8 +15,8 @@ const Intro = () => {
           alt="me"
           className="w-full h-full object-cover rounded-full p-1.5 contrast-125"
           priority={true}
-          width={300}
-          height={300}
+          width={244}
+          height={244}
         />
       </div>
       <div className="">Alireza Arezoumandan</div>
