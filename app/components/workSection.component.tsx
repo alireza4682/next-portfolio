@@ -8,7 +8,7 @@ const freelancer = [
 // const frontendDeveloper = [
 //   "worked with 20+ customers to improve their website's responsiveness and load time.",
 // ];
-let fourthJobLogosNames = ["TypeScript", "React"];
+let fourthJobLogosNames = ["TypeScript", "React", "NextJs"];
 
 const WorkSection = () => {
   return (

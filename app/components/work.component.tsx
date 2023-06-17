@@ -13,20 +13,20 @@ const Work = (props: Twork) => {
     <div>
       <h1>{heading}</h1>
       <div>
-        {content.map((c, idx) => (
-          <div key={idx}>{c}</div>
-        ))}
+        {content.map((c, idx) => <div key={idx}>{c}</div>)}
       </div>
       <div>
         {logos.map((l, _) => {
           return (
-            <Image
-              src={`/library/${l}.svg`}
-              width={64}
-              height={64}
-              alt={l}
-              key={l}
-            />
+            <div>
+              <Image
+                src={`/library/${l}.svg`}
+                width={64}
+                height={64}
+                alt={l}
+                key={l}
+              />
+            </div>
           );
         })}
       </div>
