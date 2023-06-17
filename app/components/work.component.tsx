@@ -13,12 +13,14 @@ const Work = (props: Twork) => {
     <div>
       <h1>{heading}</h1>
       <div>
-        {content.map((c, idx) => <div key={idx}>{c}</div>)}
+        {content.map((c, idx) => (
+          <div key={idx}>{c}</div>
+        ))}
       </div>
-      <div>
+      <div className="flex gap-2 mt-2">
         {logos.map((l, _) => {
           return (
-            <div>
+            <div className="w-16 h-16">
               <Image
                 src={`/library/${l}.svg`}
                 width={64}
