@@ -12,7 +12,7 @@ let fourthJobLogosNames = ["TypeScript", "React", "NextJs"];
 
 const WorkSection = () => {
   return (
-    <div className="m-1 p-1 border-4 border-border rounded-lg bg-card">
+    <div className="m-1 p-1 border-4 border-border rounded-lg ">
       <div className="flex flex-row gap-8">
         <h1 className="font-bold">Work experience</h1>
         <div> 5+ years of experience</div>
