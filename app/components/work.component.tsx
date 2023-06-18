@@ -1,4 +1,14 @@
 import Image from "next/image";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
+
+import { Separator } from "./ui/seperator";
 
 type Twork = {
   heading: string;
@@ -10,14 +20,17 @@ const Work = (props: Twork) => {
   const { heading, content, logos } = props;
 
   return (
-    <div>
-      <h1>{heading}</h1>
-      <div>
+    <Card>
+      <CardHeader>
+        <CardTitle>{heading}</CardTitle>
+        <CardDescription>frontend dev</CardDescription>
+      </CardHeader>
+      <CardContent>
         {content.map((c, idx) => (
           <div key={idx}>{c}</div>
         ))}
-      </div>
-      <div className="flex gap-2 mt-2">
+      </CardContent>
+      <CardFooter className="flex gap-2 mt-2">
         {logos.map((l, _) => {
           return (
             <div className="w-16 h-16">
@@ -31,8 +44,8 @@ const Work = (props: Twork) => {
             </div>
           );
         })}
-      </div>
-    </div>
+      </CardFooter>
+    </Card>
   );
 };
 export default Work;
