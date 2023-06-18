@@ -1,6 +1,6 @@
 const Freelance2 = () => {
   return (
-    <div className="prose prose-sm dark:prose-invert list-image-checkmark ">
+    <div className="prose prose-sm dark:prose-invert">
       <h4>Freelance</h4>
       <ul>
         <li>
