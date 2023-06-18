@@ -17,8 +17,10 @@ const WorkSection = () => {
         <h1 className="font-bold m-1">Work experience</h1>
         <span className="text-xs text-primary">5+ years of experience</span>
       </div>
-      <Work heading={"hi"} content={freelancer} logos={fourthJobLogosNames} />
-      {/* <Work heading={"bye"} content={frontendDeveloper} logos={["3", "4"]} /> */}
+      <div>
+        <Work heading={"hi"} content={freelancer} logos={fourthJobLogosNames} />
+        {/* <Work heading={"bye"} content={frontendDeveloper} logos={["3", "4"]} /> */}
+      </div>
     </div>
   );
 };

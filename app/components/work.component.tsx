@@ -22,7 +22,7 @@ const Work = (props: Twork) => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>{heading}</CardTitle>
+        <CardTitle className="prose">{heading}</CardTitle>
         <CardDescription>frontend dev</CardDescription>
       </CardHeader>
       <CardContent>
