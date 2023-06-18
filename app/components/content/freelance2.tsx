@@ -1,6 +1,6 @@
 const Freelance2 = () => {
   return (
-    <div className="prose prose-sm dark:prose-invert">
+    <div className="prose prose-sm dark:prose-invert list-image-[url(checkmark.png)]">
       <h4>Freelance</h4>
       <ul>
         <li>
@@ -15,11 +15,6 @@ const Freelance2 = () => {
           docker, supabase and react.
         </li>
       </ul>
-      <p>
-        with writing unit tests, using storybook.js and migrating from redux to
-        redux toolkit, median time to design and develop components was improved
-        by 20%.
-      </p>
     </div>
   );
 };

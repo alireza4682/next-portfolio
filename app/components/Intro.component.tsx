@@ -9,14 +9,14 @@ const Intro = () => {
     <div className="flex flex-col h-auto md:w-1/3  items-center dark:secondary">
       <ThemeSwitch />
       <div className=" flex w-64 h-64 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 justify-center items-center m-4">
-        <Image
+        {/* <Image
           src={me}
           alt="me"
           className="w-full h-full object-cover rounded-full p-1.5 contrast-125"
           priority={true}
           width={244}
           height={244}
-        />
+        /> */}
       </div>
       <div className="">Alireza Arezoumandan</div>
       <div className="text-sm">

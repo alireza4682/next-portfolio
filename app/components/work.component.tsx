@@ -10,11 +10,9 @@ import {
 
 import { Separator } from "./ui/seperator";
 
-import Freelance2 from "../content/freelance2";
-
 type Twork = {
   heading: string;
-  content: string[];
+  content: React.ReactNode;
   logos: string[];
 };
 
@@ -27,12 +25,7 @@ const Work = (props: Twork) => {
         <CardTitle className="">{heading}</CardTitle>
         <CardDescription>frontend dev</CardDescription>
       </CardHeader>
-      <CardContent className="">
-        <Freelance2 />
-        {content.map((c, idx) => (
-          <div key={idx}>{c}</div>
-        ))}
-      </CardContent>
+      <CardContent className="">{content}</CardContent>
       <CardFooter className="flex gap-2 mt-2">
         {logos.map((l, _) => {
           return (

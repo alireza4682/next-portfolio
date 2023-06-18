@@ -1,5 +1,7 @@
 import Work from "./work.component";
 
+import Freelance2 from "./content/freelance2";
+
 const freelancer = [
   "used React's best practices, code splitting and render optimization to make our customer's websites load 30% faster and 15% smoother.",
   "with writing unit tests, using storybook.js and migrating from redux to redux toolkit, median time to design and develop components was improved by 20%.",
@@ -18,8 +20,11 @@ const WorkSection = () => {
         <span className="text-xs text-primary">5+ years of experience</span>
       </div>
       <div>
-        <Work heading={"hi"} content={freelancer} logos={fourthJobLogosNames} />
-        {/* <Work heading={"bye"} content={frontendDeveloper} logos={["3", "4"]} /> */}
+        <Work
+          heading={"hi"}
+          content={<Freelance2 />}
+          logos={fourthJobLogosNames}
+        />
       </div>
     </div>
   );
