@@ -1,6 +1,10 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import { Button } from "./ui/button";
+import { Moon } from "lucide-react";
+import { Sun } from "lucide-react";
+import { CircleDashed } from "lucide-react";
 
 const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false);
@@ -12,15 +16,21 @@ const ThemeSwitch = () => {
   }, []);
 
   if (!mounted) {
-    return null;
+    return (
+      <Button>
+        <CircleDashed className="h4 w-4" />
+      </Button>
+    );
   }
 
-  return (
-    <select value={theme} onChange={(e) => setTheme(e.target.value)}>
-      <option value="system">System</option>
-      <option value="dark">Dark</option>
-      <option value="light">Light</option>
-    </select>
+  return theme === "dark" ? (
+    <Button onClick={() => setTheme("light")}>
+      <Sun className="h4 w-4" />
+    </Button>
+  ) : (
+    <Button onClick={() => setTheme("dark")}>
+      <Moon className="h-4 w-4" />
+    </Button>
   );
 };
 
