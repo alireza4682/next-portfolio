@@ -2,14 +2,6 @@ import Work from "./work.component";
 
 import Freelance2 from "./content/freelance2";
 
-const freelancer = [
-  "used React's best practices, code splitting and render optimization to make our customer's websites load 30% faster and 15% smoother.",
-  "with writing unit tests, using storybook.js and migrating from redux to redux toolkit, median time to design and develop components was improved by 20%.",
-];
-
-// const frontendDeveloper = [
-//   "worked with 20+ customers to improve their website's responsiveness and load time.",
-// ];
 let fourthJobLogosNames = ["TypeScript", "React", "NextJs"];
 
 const WorkSection = () => {
@@ -19,9 +11,14 @@ const WorkSection = () => {
         <h1 className="font-bold m-1">Work experience</h1>
         <span className="text-xs text-primary">5+ years of experience</span>
       </div>
-      <div>
+      <div className="grid grid-col-2 gap-8">
         <Work
           heading={"hi"}
+          content={<Freelance2 />}
+          logos={fourthJobLogosNames}
+        />
+        <Work
+          heading="bye"
           content={<Freelance2 />}
           logos={fourthJobLogosNames}
         />

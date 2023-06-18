@@ -4,7 +4,7 @@ const Freelance2 = () => {
       <h4>Freelance</h4>
       <ul>
         <li>
-          <p className="ml-4">
+          <p className="">
             worked with 2 startups in "Shiraz startup factory" to ensure their
             libraries type safety and polished their frontend to be pixel
             perfect and have industry level standards and minimize discrepancies
