@@ -10,6 +10,8 @@ import {
 
 import { Separator } from "./ui/seperator";
 
+import Freelance2 from "../content/freelance2";
+
 type Twork = {
   heading: string;
   content: string[];
@@ -22,10 +24,11 @@ const Work = (props: Twork) => {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="prose">{heading}</CardTitle>
+        <CardTitle className="">{heading}</CardTitle>
         <CardDescription>frontend dev</CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="">
+        <Freelance2 />
         {content.map((c, idx) => (
           <div key={idx}>{c}</div>
         ))}
@@ -33,14 +36,8 @@ const Work = (props: Twork) => {
       <CardFooter className="flex gap-2 mt-2">
         {logos.map((l, _) => {
           return (
-            <div className="w-16 h-16">
-              <Image
-                src={`/library/${l}.svg`}
-                width={64}
-                height={64}
-                alt={l}
-                key={l}
-              />
+            <div className="w-16 h-16" key={l}>
+              <Image src={`/library/${l}.svg`} width={64} height={64} alt={l} />
             </div>
           );
         })}
