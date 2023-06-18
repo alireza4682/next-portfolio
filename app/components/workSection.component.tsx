@@ -12,10 +12,10 @@ let fourthJobLogosNames = ["TypeScript", "React", "NextJs"];
 
 const WorkSection = () => {
   return (
-    <div className="m-1 p-1 border-4 border-border rounded-lg ">
-      <div className="flex flex-row gap-8">
-        <h1 className="font-bold">Work experience</h1>
-        <div> 5+ years of experience</div>
+    <div className="m-2 p-2 ">
+      <div className="flex flex-row gap-x-8 items-center">
+        <h1 className="font-bold m-1">Work experience</h1>
+        <span className="text-xs text-primary">5+ years of experience</span>
       </div>
       <Work heading={"hi"} content={freelancer} logos={fourthJobLogosNames} />
       {/* <Work heading={"bye"} content={frontendDeveloper} logos={["3", "4"]} /> */}
