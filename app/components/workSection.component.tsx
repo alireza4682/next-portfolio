@@ -29,6 +29,7 @@ const WorkSection = () => {
           description="Senior Front-End Developer"
           content={<Zeus />}
           logos={thirdJobLogosNames}
+          className="row-span-2"
         />
         <Work
           heading="Freelance"

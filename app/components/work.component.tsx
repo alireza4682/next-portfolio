@@ -9,7 +9,6 @@ import {
 } from "./ui/card";
 
 import { Separator } from "./ui/seperator";
-import { HtmlHTMLAttributes, ReactPropTypes } from "react";
 
 type Twork = {
   heading: string;
@@ -20,10 +19,10 @@ type Twork = {
 };
 
 const Work = (props: Twork) => {
-  const { heading, description, content, logos } = props;
+  const { heading, description, content, logos, className } = props;
 
   return (
-    <Card className="w-[500px] ">
+    <Card className={`w-[500] ${className}`}>
       <CardHeader>
         <CardTitle>{heading}</CardTitle>
         <CardDescription>{description}</CardDescription>
