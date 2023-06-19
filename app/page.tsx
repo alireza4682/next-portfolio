@@ -4,7 +4,7 @@ import WorkSection from "./components/workSection.component";
 
 export default function Home() {
   return (
-    <main className="flex flex-row gap-6">
+    <main className="flex flex-col md:flex-row gap-6">
       <Intro />
       <div className="flex flex-col">
         <Skills />
