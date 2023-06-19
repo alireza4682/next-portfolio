@@ -1,8 +1,14 @@
 import Work from "./work.component";
 
 import Freelance2 from "./content/freelance2";
+import Zeus from "./content/zues.ir";
+import Freelance1 from "./content/freelance1";
+import Alvand from "./content/alvand";
 
 let fourthJobLogosNames = ["TypeScript", "React", "NextJs"];
+let thirdJobLogosNames = ["TailwindCSS"];
+let secondJobLogosNames = ["JavaScript"];
+let firstJobLogosNames = ["Bootstrap", "CSS"];
 
 const WorkSection = () => {
   return (
@@ -13,14 +19,28 @@ const WorkSection = () => {
       </div>
       <div className="grid grid-col-2 gap-8">
         <Work
-          heading={"hi"}
+          heading={"Freelance"}
+          description={"Front-End engineer"}
           content={<Freelance2 />}
           logos={fourthJobLogosNames}
         />
         <Work
-          heading="bye"
-          content={<Freelance2 />}
-          logos={fourthJobLogosNames}
+          heading="Zeus.ir"
+          description="Senior Front-End Developer"
+          content={<Zeus />}
+          logos={thirdJobLogosNames}
+        />
+        <Work
+          heading="Freelance"
+          description="Front-End Developer"
+          content={<Freelance1 />}
+          logos={secondJobLogosNames}
+        />
+        <Work
+          heading="Alvand Payam Mehrgan"
+          description="Front-End Developer"
+          content={<Alvand />}
+          logos={firstJobLogosNames}
         />
       </div>
     </div>

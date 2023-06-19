@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="flex flex-row gap-6">
       <Intro />
-      <div>
+      <div className="flex flex-col">
         <Skills />
         <WorkSection />
       </div>

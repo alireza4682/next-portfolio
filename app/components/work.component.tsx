@@ -12,25 +12,26 @@ import { Separator } from "./ui/seperator";
 
 type Twork = {
   heading: string;
+  description: string;
   content: React.ReactNode;
   logos: string[];
 };
 
 const Work = (props: Twork) => {
-  const { heading, content, logos } = props;
+  const { heading, description, content, logos } = props;
 
   return (
-    <Card>
+    <Card className="w-1/2">
       <CardHeader>
-        <CardTitle className="">{heading}</CardTitle>
-        <CardDescription>frontend dev</CardDescription>
+        <CardTitle>{heading}</CardTitle>
+        <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent className="">{content}</CardContent>
       <CardFooter className="flex gap-2 mt-2">
         {logos.map((l, _) => {
           return (
-            <div className="w-16 h-16" key={l}>
-              <Image src={`/library/${l}.svg`} width={64} height={64} alt={l} />
+            <div className="w-10 h-10" key={l}>
+              <Image src={`/library/${l}.svg`} width={32} height={32} alt={l} />
             </div>
           );
         })}
