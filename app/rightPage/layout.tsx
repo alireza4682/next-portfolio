@@ -1,5 +1,5 @@
 import RightNavbar from "./rightNavbar.component";
-export default function Layout(props: { children: React.ReactNode }) {
+export default function RightPageLayout(props: { children: React.ReactNode }) {
   return (
     <section>
       <RightNavbar />

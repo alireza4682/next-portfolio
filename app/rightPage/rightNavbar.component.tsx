@@ -15,8 +15,6 @@ const RightNavbar = () => {
   return (
     <NavigationMenu>
       <NavigationMenuList>
-        <NavigationMenuItem className="text-red-400">yo</NavigationMenuItem>
-        <NavigationMenuItem>hey</NavigationMenuItem>
         <Link href="/docs" legacyBehavior passHref>
           <NavigationMenuLink className={navigationMenuTriggerStyle({})}>
             Documentation
