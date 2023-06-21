@@ -1,3 +1,5 @@
+"use client";
+import Link from "next/link";
 import {
   navigationMenuTriggerStyle,
   NavigationMenu,
@@ -15,6 +17,11 @@ const RightNavbar = () => {
       <NavigationMenuList>
         <NavigationMenuItem className="text-red-400">yo</NavigationMenuItem>
         <NavigationMenuItem>hey</NavigationMenuItem>
+        <Link href="/docs" legacyBehavior passHref>
+          <NavigationMenuLink className={navigationMenuTriggerStyle({})}>
+            Documentation
+          </NavigationMenuLink>
+        </Link>
       </NavigationMenuList>
     </NavigationMenu>
   );
