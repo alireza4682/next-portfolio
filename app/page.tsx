@@ -7,7 +7,6 @@ export default function Home() {
     <main className="flex flex-col md:flex-row gap-6">
       <Intro />
       <div className="flex flex-col">
-        <Skills />
         <WorkSection />
       </div>
     </main>
