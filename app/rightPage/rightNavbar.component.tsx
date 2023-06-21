@@ -13,7 +13,7 @@ const RightNavbar = () => {
   return (
     <NavigationMenu>
       <NavigationMenuList>
-        <NavigationMenuItem>yo</NavigationMenuItem>
+        <NavigationMenuItem className="text-red-400">yo</NavigationMenuItem>
         <NavigationMenuItem>hey</NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
