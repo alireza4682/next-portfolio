@@ -1,4 +1,11 @@
-export default function RightPage(){
-  return(
-  <h1 className="text-red-400">hello</h1>)
+import WorkSection from "../components/workSection.component";
+import RightNavbar from "./rightNavbar.component";
+
+export default function RightPage() {
+  return (
+    <div>
+      <RightNavbar />
+      <WorkSection />
+    </div>
+  );
 }

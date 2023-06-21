@@ -11,14 +11,16 @@ export const metadata = {
 
 export default function RootLayout(props: {
   children: React.ReactNode;
+  introSection: React.ReactNode;
   rightPage: React.ReactNode;
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <Providers>
-          <div className="flex flex-col">
+          <div className="flex flex-row">
             {props.children}
+            {props.introSection}
             {props.rightPage}
           </div>
         </Providers>
