@@ -6,9 +6,7 @@ export default function Home() {
   return (
     <main className="flex flex-col md:flex-row gap-6">
       <Intro />
-      <div className="flex flex-col">
-        <WorkSection />
-      </div>
+      <div className="flex flex-col"></div>
     </main>
   );
 }

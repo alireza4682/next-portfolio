@@ -1,13 +1,13 @@
 import RightNavbar from "./rightNavbar.component";
-export default function DashboardLayout({
-  children, // will be a page or nested layout
-}: {
+export default function Layout(props: {
   children: React.ReactNode;
+  experience: React.ReactNode;
 }) {
   return (
     <section>
       <RightNavbar />
-      {children}
+      {props.children}
+      {props.experience}
     </section>
   );
 }

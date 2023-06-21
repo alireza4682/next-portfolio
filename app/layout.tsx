@@ -9,15 +9,19 @@ export const metadata = {
   description: "portfolio",
 };
 
-export default function RootLayout({
-  children,
-}: {
+export default function RootLayout(props: {
   children: React.ReactNode;
+  rightPage: React.ReactNode;
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <div className="flex flex-col">
+            {props.children}
+            {props.rightPage}
+          </div>
+        </Providers>
       </body>
     </html>
   );
