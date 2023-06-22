@@ -8,7 +8,7 @@ import { useRef } from "react";
 
 function IntroNav() {
   const ref = useRef<HTMLDivElement | null>(null)
-  const entry = useIntersectionObserver(ref, { threshold: 0})
+  const entry = useIntersectionObserver(ref, { threshold: 0.8})
   const isVisible = !!entry?.isIntersecting
   return (
     <div>
