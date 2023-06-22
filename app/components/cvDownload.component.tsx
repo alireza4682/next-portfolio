@@ -1,4 +1,5 @@
 "use client";
+import { Button } from "./ui/button";
 const CvDownload = () => {
   const onDownloadClick = () => {
     return window.open(
@@ -6,12 +7,9 @@ const CvDownload = () => {
     );
   };
   return (
-    <button
-      className="bg-white text-black p-1.5 rounded-md m-2"
-      onClick={() => onDownloadClick()}
-    >
+    <Button className="" onClick={() => onDownloadClick()}>
       download CV.pdf
-    </button>
+    </Button>
   );
 };
 export default CvDownload;
