@@ -6,9 +6,11 @@ import RightMenuBar from "./components/rightMenuBar.component";
 export default function Home() {
   return (
     <main className="flex flex-col md:flex-row gap-6">
-      <div className="flex flex-row">
+      <div className="grid grid-col-1 md:grid-cols-3">
         <Intro />
-        <RightMenuBar />
+        <div className="col-span-2">
+          <RightMenuBar />
+        </div>
       </div>
     </main>
   );
