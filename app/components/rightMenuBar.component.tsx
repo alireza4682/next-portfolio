@@ -23,10 +23,10 @@ function RightMenuBar() {
   const [state, dispatch] = useReducer(rightMenuBarReducer, <WorkSection />);
   return (
     <div>
-      <div className="flex flex-row items-center justify-center">
-        <Button onClick={() => dispatch("first")}></Button>
-        <Button onClick={() => dispatch("second")}></Button>
-        <Button onClick={() => dispatch("third")}></Button>
+      <div className="flex flex-row items-center justify-center gap-8">
+        <Button onClick={() => dispatch("first")}>workSection</Button>
+        <Button onClick={() => dispatch("second")}>skills</Button>
+        <Button onClick={() => dispatch("third")}>journey</Button>
       </div>
       {state}
     </div>
