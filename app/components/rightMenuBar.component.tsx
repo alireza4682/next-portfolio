@@ -3,6 +3,7 @@ import React from "react";
 import { useReducer } from "react";
 import { Button } from "./ui/button";
 import WorkSection from "./workSection.component";
+import Skills from "./skills.component";
 
 type choices = "first" | "second" | "third";
 
@@ -11,7 +12,7 @@ const rightMenuBarReducer = (state: React.ReactElement, action: choices) => {
     case "first":
       return (state = <WorkSection />);
     case "second":
-      return (state = <div>yo</div>);
+      return (state = <Skills />);
     case "third":
       return (state = <div>wtf</div>);
     default:
