@@ -6,7 +6,7 @@ const Skills = () => {
   return (
     <div>
       <h1 className="text-lg">My Skills :</h1>
-      <SkillsContainer skill={toolsSkill} section="tools" />
+      <SkillsContainer skills={toolsSkill} section="tools" />
     </div>
   );
 };

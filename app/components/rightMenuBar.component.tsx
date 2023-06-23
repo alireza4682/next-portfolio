@@ -23,7 +23,7 @@ const rightMenuBarReducer = (state: React.ReactElement, action: choices) => {
 function RightMenuBar() {
   const [state, dispatch] = useReducer(rightMenuBarReducer, <WorkSection />);
   return (
-    <div>
+    <div className="w-full">
       <div className="flex flex-row items-center justify-center gap-8">
         <Button onClick={() => dispatch("first")}>workSection</Button>
         <Button onClick={() => dispatch("second")}>skills</Button>
