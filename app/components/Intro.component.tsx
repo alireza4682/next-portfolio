@@ -4,10 +4,9 @@ import Link from "next/link";
 import CvDownload from "./cvDownload.component";
 import IntroNav from "./introNav.component";
 
-
 const Intro = () => {
   return (
-    <div className="flex flex-col h-auto w-full md:w-1/3 min-w-[450px]  items-center dark:secondary">
+    <div className="flex flex-col h-auto w-full md:w-1/3 min-w-[450px]  items-center dark:secondary m-10">
       <IntroNav />
       <div className="m-4">
         5+ years of experience in JavaScript and 3+ years of experience in

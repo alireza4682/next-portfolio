@@ -1,6 +1,6 @@
 import SkillsContainer from "./skillsContainer.component";
 
-const toolsSkill = ["typescript", "nextjs", "redux", "tailwindcss", "sass"];
+const toolsSkill = ["TypeScript", "NextJs", "Redux", "Tailwindcss", "SASS"];
 
 const Skills = () => {
   return (

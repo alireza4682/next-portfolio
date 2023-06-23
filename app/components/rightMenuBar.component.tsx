@@ -5,9 +5,20 @@ import { Button } from "./ui/button";
 import WorkSection from "./workSection.component";
 import Skills from "./skills.component";
 
-type choices = "first" | "second" | "third";
+const choices = {
+  first: "first",
+  second: "second",
+  third: "third",
+} as const;
 
-const rightMenuBarReducer = (state: React.ReactElement, action: choices) => {
+type ObjectType<T> = T[keyof T];
+
+type TActionChoices = ObjectType<typeof choices>;
+
+const rightMenuBarReducer = (
+  state: React.ReactElement,
+  action: TActionChoices
+) => {
   switch (action) {
     case "first":
       return (state = <WorkSection />);
