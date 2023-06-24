@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 const SkillsIcon = ({ svgIcon }: { svgIcon: string }) => {
+  const svgIconAddress = svgIcon.replace(" ", "").toLowerCase();
   return (
     <div
       className="p-2 pr-4 m-1 
@@ -9,7 +10,7 @@ const SkillsIcon = ({ svgIcon }: { svgIcon: string }) => {
                   h-10"
     >
       <Image
-        src={`/library/${svgIcon}.svg`}
+        src={`/library/${svgIconAddress}.svg`}
         width={24}
         height={24}
         alt={svgIcon}
