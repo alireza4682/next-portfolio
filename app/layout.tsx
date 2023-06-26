@@ -17,9 +17,9 @@ export default function RootLayout(props: {
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <Providers>
-          <div className="grid grid-col-3">
-            <div className="col-span-1">{props.Intro}</div>
-            <div className="col-span-2">{props.main}</div>
+          <div className="grid grid-flow-col">
+            <div>{props.Intro}</div>
+            <div className="col-span-3">{props.main}</div>
           </div>
         </Providers>
       </body>
