@@ -6,7 +6,7 @@ import IntroNav from "./introNav.component";
 
 const Intro = () => {
   return (
-    <div className="dark:secondary p-10 flex flex-col items-center">
+    <div className="dark:secondary p-2 flex flex-col items-center">
       <IntroNav />
       <div className="m-2 prose prose-sm prose-h6:text-justify">
         <h6>

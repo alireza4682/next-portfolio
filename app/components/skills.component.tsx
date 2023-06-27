@@ -26,7 +26,7 @@ const softTools = ["git", "githib", "docker", "Jira"];
 
 const Skills = () => {
   return (
-    <div>
+    <div className="p-10">
       <h1 className="text-lg">My Skills :</h1>
       <div className="flex flex-wrap">
         <SkillsContainer skills={mainFront} section="Main Front-End Tech" />

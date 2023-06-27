@@ -34,7 +34,7 @@ const rightMenuBarReducer = (
 function RightMenuBar() {
   const [state, dispatch] = useReducer(rightMenuBarReducer, <WorkSection />);
   return (
-    <div className="w-full">
+    <div className="">
       <div className="flex flex-row justify-center gap-8 bg-secondary w-fit p-2">
         <Button onClick={() => dispatch("first")}>workSection</Button>
         <Button onClick={() => dispatch("second")}>Skills & Tools</Button>
