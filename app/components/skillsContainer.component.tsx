@@ -1,11 +1,5 @@
 import SkillsIcon from "./skillsIcon.component";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardContent,
-  CardDescription,
-} from "./ui/card";
+import { Card, CardHeader, CardContent, CardDescription } from "./ui/card";
 
 const SkillsContainer = ({
   skills,
@@ -15,12 +9,10 @@ const SkillsContainer = ({
   section: string;
 }) => {
   return (
-    <Card className="m-2">
-      <CardHeader>
-        <CardDescription>{section}</CardDescription>
-      </CardHeader>
+    <Card className="m-2 h-fit border-none">
+      <CardDescription className="m-2 ml-8 mt-4">{section}</CardDescription>
       <CardContent>
-        <div className="m-1 flex flex-wrap items-center">
+        <div className="m-1 flex flex-wrap">
           {skills.map((s, _) => {
             return <SkillsIcon svgIcon={s} key={s} />;
           })}

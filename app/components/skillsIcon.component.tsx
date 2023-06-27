@@ -11,11 +11,11 @@ const SkillsIcon = ({ svgIcon }: { svgIcon: string }) => {
     >
       <Image
         src={`/library/${svgIconAddress}.svg`}
-        width={24}
-        height={24}
+        width={20}
+        height={20}
         alt={svgIcon}
       />
-      <div className="px-1 text-blue-800">{svgIcon}</div>
+      <div className="px-1 text-primary-foreground text-xs">{svgIcon}</div>
     </div>
   );
 };

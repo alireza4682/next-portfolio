@@ -6,14 +6,16 @@ import IntroNav from "./introNav.component";
 
 const Intro = () => {
   return (
-    <div className="dark:secondary p-10">
+    <div className="dark:secondary p-10 flex flex-col items-center">
       <IntroNav />
-      <div className="m-4">
-        5+ years of experience in JavaScript and 3+ years of experience in
-        Reactjs, TypeScript, Redux and RESTful APIs. 2+ years of experience
-        working with Nextjs, GraphQl and MongoDB. 2+ years of experience working
-        in cross functional environment 2+ years of test driven development. 1+
-        year of experience working with Nodejs and Expressjs
+      <div className="m-2 prose prose-sm prose-h6:text-justify">
+        <h6>
+          5+ years of experience in JavaScript and 3+ years of experience in
+          Reactjs, TypeScript, Redux and RESTful APIs. 2+ years of experience
+          working with Nextjs, GraphQl and MongoDB. 2+ years of experience
+          working in cross functional environment 2+ years of test driven
+          development. 1+ year of experience working with Nodejs and Expressjs.
+        </h6>
       </div>
       <CvDownload />
       <>
