@@ -16,10 +16,10 @@ const Intro = () => {
         year of experience working with Nodejs and Expressjs
       </div>
       <CvDownload />
-      <div className="w-4/5">
+      <div className="">
         <div className="text-center">prefered stack:</div>
         <div className="p-1 border border-border rounded grid grid-cols-3 m-2 w-fit">
-          <div className="bg-primary w-16 h-16 m-2 rounded-full p-0.5 self-center justify-self-center">
+          <div className="bg-primary w-16 h-16 m-2 rounded-full p-0.5 ">
             <Image
               src={"library/nextjs.svg"}
               alt="nextjsLogo"
@@ -28,7 +28,7 @@ const Intro = () => {
               height={64}
             />
           </div>
-          <div className=" w-16 h-16 m-2 rounded-lg self-center justify-self-center p-1">
+          <div className=" w-16 h-16 m-2 rounded-lg  p-1">
             <Image
               src={"library/typescript.svg"}
               alt="typescriptLogo"
@@ -37,7 +37,7 @@ const Intro = () => {
               height={64}
             />
           </div>
-          <div className="rounded-full flex w-16 h-16 bg-white m-2 self-center justify-self-center p-1">
+          <div className="rounded-full flex w-16 h-16 bg-white m-2  p-1">
             <Image
               src={"library/react.svg"}
               alt="reactLogo"
@@ -46,7 +46,7 @@ const Intro = () => {
               height={64}
             />
           </div>
-          <div className="rounded-full flex w-16 h-16 bg-white m-2 self-center justify-self-center p-1">
+          <div className="rounded-full flex w-16 h-16 bg-white m-2  p-1">
             <Image
               src={"library/tailwindcss.svg"}
               alt="tailwindcssLogo"
@@ -55,7 +55,7 @@ const Intro = () => {
               height={64}
             />
           </div>
-          <div className="rounded-full flex w-16 h-16 bg-white m-2 self-center justify-self-center p-1">
+          <div className="rounded-full flex w-16 h-16 bg-white m-2  p-1">
             <Image
               src={"library/redux.svg"}
               alt="reduxLogo"
@@ -65,7 +65,7 @@ const Intro = () => {
             />
           </div>
 
-          <div className="rounded-full flex w-16 h-16 bg-white m-2 self-center justify-self-center p-1">
+          <div className="rounded-full flex w-16 h-16 bg-white m-2  p-1">
             <Image
               src={"library/prisma.svg"}
               alt="prismaLogo"
