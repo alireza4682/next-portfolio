@@ -4,8 +4,8 @@ import me from "../../public/me.jpg";
 
 function IntroNav() {
   return (
-    <div>
-      <div className=" flex w-64 h-64 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 justify-center items-center m-4">
+    <div className="text-center">
+      <div className=" flex w-64 h-64 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500  m-4">
         {/* <Image
           src={me}
           alt="me"

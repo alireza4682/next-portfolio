@@ -6,7 +6,7 @@ import IntroNav from "./introNav.component";
 
 const Intro = () => {
   return (
-    <div className="flex flex-col h-auto  items-center dark:secondary p-10">
+    <div className="flex flex-col h-auto items-center dark:secondary p-10">
       <IntroNav />
       <div className="m-4">
         5+ years of experience in JavaScript and 3+ years of experience in
@@ -18,8 +18,8 @@ const Intro = () => {
       <CvDownload />
       <div className="w-4/5">
         <div className="text-center">prefered stack:</div>
-        <div className="p-1 border-2 border-white rounded-lg grid grid-cols-3 m-2 ">
-          <div className="bg-white w-16 h-16 m-2 rounded-full p-0.5 self-center justify-self-center">
+        <div className="p-1 border border-border rounded grid grid-cols-3 m-2 w-fit">
+          <div className="bg-primary w-16 h-16 m-2 rounded-full p-0.5 self-center justify-self-center">
             <Image
               src={"library/nextjs.svg"}
               alt="nextjsLogo"

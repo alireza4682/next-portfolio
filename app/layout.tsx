@@ -9,19 +9,11 @@ export const metadata = {
   description: "portfolio",
 };
 
-export default function RootLayout(props: {
-  main: React.ReactNode;
-  Intro: React.ReactNode;
-}) {
+export default function RootLayout(props: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <Providers>
-          <div className="grid grid-flow-col">
-            <div>{props.Intro}</div>
-            <div className="col-span-3">{props.main}</div>
-          </div>
-        </Providers>
+        <Providers>{props.children}</Providers>
       </body>
     </html>
   );
