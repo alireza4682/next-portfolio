@@ -17,18 +17,18 @@ const ThemeSwitch = () => {
 
   if (!mounted) {
     return (
-      <Button>
+      <Button variant="ghost" size="icon">
         <CircleDashed className="h4 w-4" />
       </Button>
     );
   }
 
   return theme === "dark" ? (
-    <Button onClick={() => setTheme("light")}>
+    <Button onClick={() => setTheme("light")} variant="ghost" size="icon">
       <Sun className="h4 w-4" />
     </Button>
   ) : (
-    <Button onClick={() => setTheme("dark")}>
+    <Button onClick={() => setTheme("dark")} variant="ghost" size="icon">
       <Moon className="h-4 w-4" />
     </Button>
   );
