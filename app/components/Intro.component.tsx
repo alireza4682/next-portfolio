@@ -8,7 +8,7 @@ const Intro = () => {
   return (
     <div className="dark:secondary p-10">
       <IntroNav />
-      <div className="m-4 w-1/3">
+      <div className="m-4">
         5+ years of experience in JavaScript and 3+ years of experience in
         Reactjs, TypeScript, Redux and RESTful APIs. 2+ years of experience
         working with Nextjs, GraphQl and MongoDB. 2+ years of experience working
