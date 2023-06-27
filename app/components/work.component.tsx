@@ -22,13 +22,13 @@ const Work = (props: Twork) => {
   const { heading, description, content, logos, className } = props;
 
   return (
-    <Card className={`w-[500] ${className}`}>
+    <Card className={`w-auto ${className}`}>
       <CardHeader>
         <CardTitle>{heading}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
       <CardContent className="">{content}</CardContent>
-      <CardFooter className="flex gap-2 mt-2">
+      <CardFooter className="flex flex-wrap gap-2 mt-2">
         {logos.map((l, _) => {
           return (
             <div className="w-10 h-10" key={l}>

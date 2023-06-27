@@ -12,7 +12,7 @@ let firstJobLogosNames = ["Bootstrap", "CSS"];
 
 const WorkSection = () => {
   return (
-    <div className="m-2 p-2 ">
+    <div className="m-2 p-2 w-2/3">
       <div className="flex flex-row gap-x-8 items-center">
         <h1 className="font-bold m-1">Work experience</h1>
         <span className="text-xs text-primary">5+ years of experience</span>

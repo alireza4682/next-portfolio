@@ -6,9 +6,9 @@ import IntroNav from "./introNav.component";
 
 const Intro = () => {
   return (
-    <div className="flex flex-col h-auto items-center dark:secondary p-10">
+    <div className="dark:secondary p-10">
       <IntroNav />
-      <div className="m-4">
+      <div className="m-4 w-1/3">
         5+ years of experience in JavaScript and 3+ years of experience in
         Reactjs, TypeScript, Redux and RESTful APIs. 2+ years of experience
         working with Nextjs, GraphQl and MongoDB. 2+ years of experience working
@@ -16,8 +16,8 @@ const Intro = () => {
         year of experience working with Nodejs and Expressjs
       </div>
       <CvDownload />
-      <div className="">
-        <div className="text-center">prefered stack:</div>
+      <>
+        <div className="">prefered stack:</div>
         <div className="p-1 border border-border rounded grid grid-cols-3 m-2 w-fit">
           <div className="bg-primary w-16 h-16 m-2 rounded-full p-0.5 ">
             <Image
@@ -75,7 +75,7 @@ const Intro = () => {
             />
           </div>
         </div>
-      </div>
+      </>
       <div>
         <div className="font-extrabold">contact:</div>
         <div className="text-sm">alirezaarezoumandan1@gmail.com</div>

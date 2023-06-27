@@ -7,7 +7,7 @@ const CvDownload = () => {
     );
   };
   return (
-    <Button className="" onClick={() => onDownloadClick()}>
+    <Button className="w-fit" onClick={() => onDownloadClick()}>
       download CV.pdf
     </Button>
   );
