@@ -32,7 +32,15 @@ const Work = (props: Twork) => {
         {logos.map((l, _) => {
           return (
             <div className="w-10 h-10" key={l}>
-              <Image src={`/library/${l}.svg`} width={32} height={32} alt={l} />
+              <Image
+                src={`/library/${l}.svg`}
+                width={32}
+                height={32}
+                alt={l}
+                placeholder="empty"
+                priority={false}
+                className=""
+              />
             </div>
           );
         })}
