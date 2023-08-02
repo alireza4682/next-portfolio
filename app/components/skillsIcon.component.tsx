@@ -9,12 +9,14 @@ const SkillsIcon = ({ svgIcon }: { svgIcon: string }) => {
                   rounded-sm bg-primary text-primary-foreground hover:bg-primary/90
                   h-10"
     >
-      <Image
-        src={`/library/${svgIconAddress}.svg`}
-        width={20}
-        height={20}
-        alt={svgIcon}
-      />
+      <div className="w-5 h-5 relative">
+        <Image
+          src={`/library/${svgIconAddress}.svg`}
+          fill
+          alt={svgIcon}
+          className="object-contain "
+        />
+      </div>
       <div className="px-1 text-primary-foreground text-xs">{svgIcon}</div>
     </div>
   );

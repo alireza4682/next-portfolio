@@ -18,35 +18,31 @@ const WorkSection = () => {
         <span className="text-xs text-primary">5+ years of experience</span>
       </div>
       <div className="grid grid-col-1 lg:grid-cols-2 gap-8">
-        <div className="grid gap-8">
-          <Work
-            heading={"Freelance"}
-            description={"Front-End engineer -- Nov 2022 - Present"}
-            content={<Freelance2 />}
-            logos={fourthJobLogosNames}
-          />
-          <Work
-            heading="Freelance"
-            description="Front-End Developer -- Mar 2020 - Mar 2021"
-            content={<Freelance1 />}
-            logos={secondJobLogosNames}
-          />
-          <Work
-            heading="Alvand Payam Mehrgan"
-            description="Front-End Developer -- May 2018 - Feb 2020"
-            content={<Alvand />}
-            logos={firstJobLogosNames}
-          />
-        </div>
-        <div>
-          <Work
-            heading="Zeus.ir"
-            description="Senior Front-End Developer -- Apr 2021 - Oct 2022"
-            content={<Zeus />}
-            logos={thirdJobLogosNames}
-            className="row-span-2"
-          />
-        </div>
+        <Work
+          heading={"Freelance"}
+          description={"Front-End engineer -- Nov 2022 - Present"}
+          content={<Freelance2 />}
+          logos={fourthJobLogosNames}
+        />
+        <Work
+          heading="Zeus.ir"
+          description="Senior Front-End Developer -- Apr 2021 - Oct 2022"
+          content={<Zeus />}
+          logos={thirdJobLogosNames}
+          className="row-span-2"
+        />
+        <Work
+          heading="Freelance"
+          description="Front-End Developer -- Mar 2020 - Mar 2021"
+          content={<Freelance1 />}
+          logos={secondJobLogosNames}
+        />
+        <Work
+          heading="Alvand Payam Mehrgan"
+          description="Front-End Developer -- May 2018 - Feb 2020"
+          content={<Alvand />}
+          logos={firstJobLogosNames}
+        />
       </div>
     </div>
   );
