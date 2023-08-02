@@ -22,7 +22,7 @@ const BackEndRelated = [
   "Postman",
 ];
 const TestingLibraries = ["Jest", "Testing Library", "Playwright", "storybook"];
-const softTools = ["git", "githib", "docker", "Jira"];
+const softTools = ["git", "github", "docker", "Jira"];
 
 const Skills = () => {
   return (
