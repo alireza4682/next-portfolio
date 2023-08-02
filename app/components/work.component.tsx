@@ -39,7 +39,7 @@ const Work = (props: Twork) => {
                 alt={l}
                 placeholder="empty"
                 priority={false}
-                className=""
+                className="object-contain h-full w-auto"
               />
             </div>
           );
