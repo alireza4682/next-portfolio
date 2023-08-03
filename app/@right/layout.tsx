@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "../components/ui/button";
-import { Separator } from "@radix-ui/react-separator";
+import { Separator } from "../components/ui/seperator";
 import ThemeSwitch from "../components/themeChanger";
 
 export default function RightLayout({
@@ -18,14 +18,14 @@ export default function RightLayout({
   } as const;
 
   const sectionState = (state: keyof typeof choices) => {
-    return <div>{choices[state]}</div>;
+    return choices[state];
   };
 
   const [section, setSection] = useState<keyof typeof choices>("first");
 
   return (
-    <div className="mt-20">
-      <div className="flex flex-row justify-between items-center pr-2">
+    <div className="mt-20 relative">
+      <div className="flex flex-row justify-between items-center pr-2 sticky top-0 z-10 bg-background">
         <div className="flex flex-row justify-start gap-1 lg:gap-4 p-2 h-14">
           <Button onClick={() => setSection("first")} variant="ghost">
             Work

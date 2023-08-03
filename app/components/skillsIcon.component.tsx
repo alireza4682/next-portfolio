@@ -14,7 +14,7 @@ const SkillsIcon = ({ svgIcon }: { svgIcon: string }) => {
           src={`/library/${svgIconAddress}.svg`}
           fill
           alt={svgIcon}
-          className="object-contain "
+          className="object-contain"
         />
       </div>
       <div className="px-1 text-primary-foreground text-xs">{svgIcon}</div>
