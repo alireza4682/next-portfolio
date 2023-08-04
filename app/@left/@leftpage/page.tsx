@@ -1,10 +1,24 @@
 import Image from "next/image";
 import Link from "next/link";
 import CvDownload from "../../components/cvDownload.component";
+import me from "@/public/me.jpg";
+import { Separator } from "@/app/components/ui/seperator";
 
 export default function LeftPage() {
   return (
-    <div className=" p-2 flex flex-col items-center mt-10">
+    <div className=" p-2 flex flex-col items-center sticky top-0 -mt-20">
+      <div className="flex flex-row items-center gap-2 text-sm my-1 ">
+        <Image
+          src={me}
+          width={48}
+          height={48}
+          alt="small picture"
+          className="rounded-full object-cover aspect-square"
+        />
+        <div>Alireza Arezoumandan</div>
+        <div>5+ years experience</div>
+      </div>
+      <Separator className="mb-10" />
       <div className="m-2 prose prose-sm prose-h6:text-justify">
         <h6>
           5+ years of experience in JavaScript and 3+ years of experience in

@@ -25,20 +25,22 @@ export default function RightLayout({
 
   return (
     <div className="mt-20 relative">
-      <div className="flex flex-row justify-between items-center pr-2 sticky top-0 z-10 bg-background">
-        <div className="flex flex-row justify-start gap-1 lg:gap-4 p-2 h-14">
-          <Button onClick={() => setSection("first")} variant="ghost">
-            Work
-          </Button>
-          <Separator orientation="vertical" />
-          <Button onClick={() => setSection("second")} variant="ghost">
-            Skills
-          </Button>
-          <Separator orientation="vertical" />
+      <div className="sticky top-0 z-10 bg-background">
+        <div className="flex flex-row justify-between items-center pr-2 ">
+          <div className="flex flex-row justify-start gap-1 lg:gap-4 p-2 h-14">
+            <Button onClick={() => setSection("first")} variant="ghost">
+              Work
+            </Button>
+            <Separator orientation="vertical" />
+            <Button onClick={() => setSection("second")} variant="ghost">
+              Skills
+            </Button>
+            <Separator orientation="vertical" />
+          </div>
+          <ThemeSwitch />
         </div>
-        <ThemeSwitch />
+        <Separator orientation="horizontal" className="my-2" />
       </div>
-      <Separator className="my-4" />
       {sectionState(section)}
     </div>
   );
