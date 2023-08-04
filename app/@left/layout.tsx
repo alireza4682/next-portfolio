@@ -4,18 +4,22 @@ import me from "../../public/me.jpg";
 import { useIntersectionObserver } from "../hooks/useIntersectionObserver.hook";
 import { useRef } from "react";
 
-export default function LeftLayout(props: { children: React.ReactNode }) {
+export default function LeftLayout({
+  leftpage,
+}: {
+  leftpage: React.ReactNode;
+}) {
   const myRef = useRef<HTMLDivElement | null>(null);
   const entry = useIntersectionObserver(myRef, {
     threshold: 0,
-    root: document,
+    root: null,
     rootMargin: "0px",
   });
 
   const isVisible = !!entry?.isIntersecting;
   return (
     <>
-      {true ? (
+      {isVisible ? (
         <div className="flex flex-col items-center text-center" ref={myRef}>
           <div className="w-64 h-64 rounded-full bg-gradient-to-r from-sky-500 via-purple-500 to-yellow-500  m-4">
             <Image
@@ -33,9 +37,9 @@ export default function LeftLayout(props: { children: React.ReactNode }) {
           </div>
         </div>
       ) : (
-        <div className="text-white">hi</div>
+        <div className="text-white"></div>
       )}
-      {props.children}
+      {leftpage}
     </>
   );
 }

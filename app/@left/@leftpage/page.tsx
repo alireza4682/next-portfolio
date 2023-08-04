@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import CvDownload from "../components/cvDownload.component";
+import CvDownload from "../../components/cvDownload.component";
 
 export default function LeftPage() {
   return (
