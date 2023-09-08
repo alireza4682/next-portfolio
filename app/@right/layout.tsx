@@ -17,22 +17,27 @@ export default function RightLayout({
     second: skills,
   } as const;
 
-  const sectionState = (state: keyof typeof choices) => {
+  const tabs = [
+    { id: "Work", value: work },
+    { id: "Skills", value: skills },
+  ] as const;
+
+  const activeTabState = (state: (typeof tabs)[number]["id"]) => {
     return choices[state];
   };
 
-  const [section, setSection] = useState<keyof typeof choices>("first");
+  const [activeTab, setactiveTab] = useState<keyof typeof choices>("first");
 
   return (
     <div className="mt-20 relative">
       <div className="sticky top-0 z-10 bg-background">
         <div className="flex flex-row justify-between items-center pr-2 ">
           <div className="flex flex-row justify-start gap-1 lg:gap-4 p-2 h-14">
-            <Button onClick={() => setSection("first")} variant="ghost">
+            <Button onClick={() => setactiveTab("first")} variant="ghost">
               Work
             </Button>
             <Separator orientation="vertical" />
-            <Button onClick={() => setSection("second")} variant="ghost">
+            <Button onClick={() => setactiveTab("second")} variant="ghost">
               Skills
             </Button>
             <Separator orientation="vertical" />
@@ -41,7 +46,7 @@ export default function RightLayout({
         </div>
         <Separator orientation="horizontal" className="my-2" />
       </div>
-      {sectionState(section)}
+      {activeTabState(activeTab)}
     </div>
   );
 }
