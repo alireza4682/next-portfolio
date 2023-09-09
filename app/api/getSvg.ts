@@ -1,3 +1,4 @@
+import prisma from "@/lib/prisma";
 export default async function getSvg() {
   const res = await fetch("");
   if (res.ok!) {
