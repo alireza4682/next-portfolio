@@ -22,38 +22,21 @@ export default function RightLayout({
     return tabs.filter((tab) => tab["id"] === state).map((tab) => tab.value);
   };
 
-  const [activeTab, setactiveTab] =
-    useState<(typeof tabs)[number]["id"]>("Work");
+  const [activeTab, setactiveTab] = useState<(typeof tabs)[number]["id"]>(
+    tabs[0]["id"]
+  );
 
   return (
     <div className="mt-20 relative">
       <div className="sticky top-0 z-10 bg-background">
         <div className="flex flex-row justify-between items-center pr-2 ">
-          <div className="flex flex-row justify-start gap-1 lg:gap-4 p-2 h-14">
+          <div className="flex flex-row">
             {tabs.map((tab) => (
-              <div key={tab.id}>
-                <Button
-                  onClick={() => setactiveTab(tab.id)}
-                  className={`${
-                    activeTab === tab.id ? "" : "hover:text-white/60"
-                  } relative rounded-full px-3 py-1.5 text-sm font-medium text-white outline-sky-400 transition focus-visible:outline-2`}
-                  variant="ghost"
-                  style={{
-                    WebkitTapHighlightColor: "transparent",
-                  }}
-                >
-                  {activeTab === tab.id && (
-                    <motion.span
-                      layoutId="bubble"
-                      className="absolute inset-0 z-10 bg-white mix-blend-difference"
-                      style={{ borderRadius: 9999 }}
-                      transition={{
-                        type: "spring",
-                        bounce: 0.2,
-                        duration: 0.6,
-                      }}
-                    />
-                  )}
+              <div
+                key={tab.id}
+                className="flex flex-row justify-start gap-1 lg:gap-4 p-2 h-14"
+              >
+                <Button onClick={() => setactiveTab(tab.id)} variant="ghost">
                   {tab.id}
                 </Button>
                 <Separator orientation="vertical" />
