@@ -1,53 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
-async function seed() {
-  for (let i = 0; i < svgs.length; i++) {
-    await prisma.svgs.create({
-      data: {
-        title: svgs[i].title,
-        category: svgs[i].category,
-        route: svgs[i].route,
-        url: svgs[i].route,
-      },
-    });
-  }
-}
-
-seed()
-  .then(async () => {
-    await prisma.$disconnect();
-  })
-  .catch(async (e) => {
-    console.error(e);
-    await prisma.$disconnect();
-    process.exit(1);
-  });
-
-export type tCategory =
-  | "All"
-  | "Software"
-  | "Library"
-  | "Hosting"
-  | "Framework"
-  | "CMS"
-  | "Database"
-  | "Compiler"
-  | "Social"
-  | "Entertainment"
-  | "Browser"
-  | "Language"
-  | "Education"
-  | "Jobs";
-
-export interface iSVG {
-  id: number;
-  title: string;
-  category: string;
-  route: string;
-  url: string;
-}
-
 export const svgs: iSVG[] = [
   {
     id: 1,
@@ -1310,3 +1263,50 @@ export const svgs: iSVG[] = [
     url: "https://www.infojobs.net/",
   },
 ];
+
+async function seed() {
+  for (let i = 0; i < svgs.length; i++) {
+    await prisma.svgs.create({
+      data: {
+        title: svgs[i].title,
+        category: svgs[i].category,
+        route: svgs[i].route,
+        url: svgs[i].route,
+      },
+    });
+  }
+}
+
+seed()
+  .then(async () => {
+    await prisma.$disconnect();
+  })
+  .catch(async (e) => {
+    console.error(e);
+    await prisma.$disconnect();
+    process.exit(1);
+  });
+
+export type tCategory =
+  | "All"
+  | "Software"
+  | "Library"
+  | "Hosting"
+  | "Framework"
+  | "CMS"
+  | "Database"
+  | "Compiler"
+  | "Social"
+  | "Entertainment"
+  | "Browser"
+  | "Language"
+  | "Education"
+  | "Jobs";
+
+export interface iSVG {
+  id: number;
+  title: string;
+  category: string;
+  route: string;
+  url: string;
+}
