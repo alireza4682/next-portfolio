@@ -6,7 +6,7 @@ export default async function getSvg(logo: string) {
     },
   });
   if (foundLogo === null) {
-    throw new Error("svg not found");
+    throw new Error(`${logo}`);
   }
 
   return foundLogo.route;

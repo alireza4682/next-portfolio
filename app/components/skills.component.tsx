@@ -1,28 +1,40 @@
 import SkillsContainer from "./skillsContainer.component";
 
-const mainFront = ["React", "NextJs", "Redux"];
+//TODO need to query based on gategory and select
+
+const mainFront = ["React", "Nextjs", "Redux"];
 const Languages = ["TypeScript", "JavaScript", "Python"];
-const styling = ["SASS", "Tailwindcss"];
+const styling = ["Sass", "Tailwind CSS"];
 const ComponentLibraries = [
   "Material UI",
   "Headless UI",
-  "DaisyUI",
-  "Radix-UI",
+  //  "Radix-UI"
 ];
 const ReactLibraries = ["React Query", "React Router", "Framer"];
-const BackEndTech = ["Nodejs", "ExpressJs", "NestJs"];
+const BackEndTech = ["Node.js", "Express.js", "NestJS"];
 const BackEndRelated = [
-  "GraphQl",
+  "GraphQL",
   "PostgreSQL",
   "MongoDB",
   "Prisma",
-  "tRPC",
+  // "tRPC",
   "Firebase",
-  "supabase",
+  "Supabase",
   "Postman",
 ];
-const TestingLibraries = ["Jest", "Testing Library", "Playwright", "storybook"];
-const softTools = ["git", "github", "docker", "Jira"];
+const TestingLibraries = [
+  "Jest",
+  "Testing Library",
+  "Playwright",
+  "Storybook",
+  // "Cypress",
+];
+const softTools = [
+  "Git",
+  "Github",
+  "Docker",
+  // "Jira"
+];
 
 const Skills = () => {
   return (

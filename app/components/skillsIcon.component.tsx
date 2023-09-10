@@ -1,7 +1,8 @@
 import Image from "next/image";
+import getSvg from "../api/getSvg.service";
 
-const SkillsIcon = ({ svgIcon }: { svgIcon: string }) => {
-  const svgIconAddress = svgIcon.replace(" ", "").toLowerCase();
+const SkillsIcon = async ({ svgIcon }: { svgIcon: string }) => {
+  const svgIconAddress = await getSvg(svgIcon);
   return (
     <div
       className="p-2 pr-4 m-1 
@@ -11,7 +12,7 @@ const SkillsIcon = ({ svgIcon }: { svgIcon: string }) => {
     >
       <div className="w-5 h-5 relative">
         <Image
-          src={`/library/${svgIconAddress}.svg`}
+          src={svgIconAddress}
           fill
           alt={svgIcon}
           className="object-contain"
