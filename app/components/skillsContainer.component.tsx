@@ -9,7 +9,7 @@ const SkillsContainer = ({
   section: string;
 }) => {
   return (
-    <Card className="m-2 h-fit border-none">
+    <Card className="m-2 h-fit border-none bg-accent">
       <CardDescription className="m-2 ml-8 mt-4">{section}</CardDescription>
       <CardContent>
         <div className="m-1 flex flex-wrap">

@@ -9,5 +9,5 @@ export default async function getSvg(logo: string) {
     throw new Error(`${logo}`);
   }
 
-  return foundLogo.route;
+  return foundLogo;
 }

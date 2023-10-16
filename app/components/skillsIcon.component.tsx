@@ -2,7 +2,7 @@ import Image from "next/image";
 import getSvg from "../api/getSvg.service";
 
 const SkillsIcon = async ({ svgIcon }: { svgIcon: string }) => {
-  const svgIconAddress = await getSvg(svgIcon);
+  const { route: svgIconAddress } = await getSvg(svgIcon);
   return (
     <div
       className="p-2 pr-4 m-1 

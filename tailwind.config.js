@@ -16,7 +16,6 @@ module.exports = {
     },
     extend: {
       colors: {
-        // have tailwind merge don't need opacity here cause not used often
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
