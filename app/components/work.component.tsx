@@ -1,4 +1,5 @@
-import Image from "next/image";
+import ContentWork from "./description.component";
+import Description from "./description.component";
 import {
   Card,
   CardContent,
@@ -8,8 +9,6 @@ import {
   CardTitle,
 } from "./ui/card";
 
-import { Separator } from "./ui/seperator";
-import getSvg from "../api/getSvg.service";
 import WorkIcon from "./workIcon.componetn";
 
 type Twork = {
@@ -29,7 +28,9 @@ const Work = async (props: Twork) => {
         <CardTitle>{heading}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
-      <CardContent className="">{content}</CardContent>
+      <CardContent className="">
+        <ContentWork>{content}</ContentWork>
+      </CardContent>
       <CardFooter className="flex flex-wrap gap-2">
         {logos.map((l) => {
           return <WorkIcon svgIcon={l} key={l} />;
