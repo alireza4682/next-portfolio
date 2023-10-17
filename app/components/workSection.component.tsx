@@ -5,8 +5,8 @@ import Zeus from "./content/zues.ir";
 import Freelance1 from "./content/freelance1";
 import Alvand from "./content/alvand";
 
-let fourthJobLogosNames = ["TypeScript", "React", "NextJs"];
-let thirdJobLogosNames = ["TailwindCSS"];
+let fourthJobLogosNames = ["TypeScript", "React", "Nextjs"];
+let thirdJobLogosNames = ["Tailwind CSS"];
 let secondJobLogosNames = ["JavaScript"];
 let firstJobLogosNames = ["Bootstrap", "CSS"];
 
