@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button } from "../components/ui/button";
 import { Separator } from "../components/ui/seperator";
 import ThemeSwitch from "../components/themeChanger";
-import { AnimatePresence, animate, motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function RightLayout({
   work,
@@ -18,9 +18,9 @@ export default function RightLayout({
     { id: "Skills", value: skills },
   ] as const;
 
-  const activeTabState = (state: (typeof tabs)[number]["id"]) => {
-    return tabs.filter((tab) => tab["id"] === state).map((tab) => tab.value);
-  };
+  // const activeTabState = (state: (typeof tabs)[number]["id"]) => {
+  //   return tabs.filter((tab) => tab["id"] === state).map((tab) => tab.value);
+  // };
 
   const [activeTab, setactiveTab] = useState<(typeof tabs)[number]["id"]>(
     tabs[0]["id"]
@@ -51,10 +51,10 @@ export default function RightLayout({
         <motion.div
           key={activeTab}
           initial={{ translateX: "100%", opacity: 0 }}
-          animate={{ translateX: "auto", opacity: 1 }}
-          exit={{ translateX: "auto", opacity: 0 }}
+          animate={{ translateX: "0%", opacity: 1 }}
+          exit={{ translateX: "100%", opacity: 0 }}
         >
-          {activeTabState(activeTab)}
+          {activeTab === "Work" ? work : skills}
         </motion.div>
       </AnimatePresence>
     </div>
