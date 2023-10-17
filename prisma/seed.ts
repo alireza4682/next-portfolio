@@ -1,5 +1,5 @@
-import { PrismaClient } from "@prisma/client";
-const prisma = new PrismaClient();
+// import { PrismaClient } from "@prisma/client";
+// const prisma = new PrismaClient();
 
 export const svgs: iSVG[] = [
   {
@@ -1264,28 +1264,28 @@ export const svgs: iSVG[] = [
   },
 ];
 
-async function seed() {
-  for (let i = 0; i < svgs.length; i++) {
-    await prisma.svgs.create({
-      data: {
-        title: svgs[i].title,
-        category: svgs[i].category,
-        route: svgs[i].route,
-        url: svgs[i].route,
-      },
-    });
-  }
-}
+// async function seed() {
+//   for (let i = 0; i < svgs.length; i++) {
+//     await prisma.svgs.create({
+//       data: {
+//         title: svgs[i].title,
+//         category: svgs[i].category,
+//         route: svgs[i].route,
+//         url: svgs[i].route,
+//       },
+//     });
+//   }
+// }
 
-seed()
-  .then(async () => {
-    await prisma.$disconnect();
-  })
-  .catch(async (e) => {
-    console.error(e);
-    await prisma.$disconnect();
-    process.exit(1);
-  });
+// seed()
+//   .then(async () => {
+//     await prisma.$disconnect();
+//   })
+//   .catch(async (e) => {
+//     console.error(e);
+//     await prisma.$disconnect();
+//     process.exit(1);
+//   });
 
 export type tCategory =
   | "All"

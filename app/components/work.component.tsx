@@ -1,5 +1,4 @@
-import ContentWork from "./description.component";
-import Description from "./description.component";
+import ContentWork from "./content-work.component";
 import {
   Card,
   CardContent,
@@ -19,7 +18,7 @@ type Twork = {
   className?: string;
 };
 
-const Work = async (props: Twork) => {
+const Work = (props: Twork) => {
   const { heading, description, content, logos, className } = props;
 
   return (
