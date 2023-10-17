@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button } from "../components/ui/button";
 import { Separator } from "../components/ui/seperator";
 import ThemeSwitch from "../components/themeChanger";
-import { motion } from "framer-motion";
+import { AnimatePresence, animate, motion } from "framer-motion";
 
 export default function RightLayout({
   work,
@@ -27,7 +27,7 @@ export default function RightLayout({
   );
 
   return (
-    <div className="mt-20 relative">
+    <div className="mt-20 relative overflow-hidden">
       <div className="sticky top-0 z-10 bg-background">
         <div className="flex flex-row justify-between items-center pr-2 ">
           <div className="flex flex-row">
@@ -47,7 +47,16 @@ export default function RightLayout({
         </div>
         <Separator orientation="horizontal" className="my-2" />
       </div>
-      {activeTabState(activeTab)}
+      <AnimatePresence initial={false}>
+        <motion.div
+          key={activeTab}
+          initial={{ translateX: "100%", opacity: 0 }}
+          animate={{ translateX: "auto", opacity: 1 }}
+          exit={{ translateX: "auto", opacity: 0 }}
+        >
+          {activeTabState(activeTab)}
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 }

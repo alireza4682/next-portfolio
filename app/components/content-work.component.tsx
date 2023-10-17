@@ -2,12 +2,14 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import AccordionTrigger from "./accordion-trigger.component";
 
 const ContentWork = ({ children }: { children: React.ReactNode }) => {
   const [show, setShow] = useState(true);
 
   return (
-    <div className="p-2 overflow-hidden" onClick={() => setShow(!show)}>
+    <div className="p-2 overflow-hidden">
+      <AccordionTrigger show={show} setShow={setShow} />
       <AnimatePresence initial={false}>
         {show && (
           <motion.div

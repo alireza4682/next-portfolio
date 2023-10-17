@@ -17,7 +17,7 @@ const WorkSection = () => {
         <h1 className="font-bold m-1">Work experience</h1>
         <span className="text-xs text-primary">5+ years of experience</span>
       </div>
-      <div className="grid grid-col-1 lg:grid-cols-2 gap-8">
+      <div className="columns-1 lg:columns-2 gap-8 [&>*]:break-inside-avoid [&>*]:mb-8">
         <Work
           heading={"Freelance"}
           description={"Front-End engineer -- Nov 2022 - Present"}
@@ -29,7 +29,6 @@ const WorkSection = () => {
           description="Senior Front-End Developer -- Apr 2021 - Oct 2022"
           content={<Zeus />}
           logos={thirdJobLogosNames}
-          className="row-span-2"
         />
         <Work
           heading="Freelance"
