@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "./ui/button";
+import { Button } from "../../components/ui/button";
 const CvDownload = () => {
   const onDownloadClick = () => {
     return window.open(
@@ -7,8 +7,12 @@ const CvDownload = () => {
     );
   };
   return (
-    <Button className="w-fit" onClick={() => onDownloadClick()}>
-      download CV.pdf
+    <Button
+      variant={"outline"}
+      onClick={() => onDownloadClick()}
+      className="mt-6"
+    >
+      Resume PDF
     </Button>
   );
 };

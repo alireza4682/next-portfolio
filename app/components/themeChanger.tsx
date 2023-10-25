@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import { Button } from "./ui/button";
+import { Button } from "../../components/ui/button";
 import { Moon } from "lucide-react";
 import { Sun } from "lucide-react";
 import { CircleDashed } from "lucide-react";

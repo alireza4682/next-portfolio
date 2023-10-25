@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "../components/ui/button";
-import { Separator } from "../components/ui/seperator";
+import { Button } from "../../components/ui/button";
+import { Separator } from "../../components/ui/seperator";
 import ThemeSwitch from "../components/themeChanger";
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -50,9 +50,9 @@ export default function RightLayout({
       <AnimatePresence initial={false}>
         <motion.div
           key={activeTab}
-          initial={{ translateX: "100%", opacity: 0 }}
-          animate={{ translateX: "0%", opacity: 1 }}
-          exit={{ translateX: "100%", opacity: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
         >
           {activeTab === "Work" ? work : skills}
         </motion.div>

@@ -1,5 +1,5 @@
 import SkillsIcon from "./skillsIcon.component";
-import { Card, CardContent, CardDescription } from "./ui/card";
+import { Card, CardContent, CardDescription } from "../../components/ui/card";
 
 const SkillsContainer = ({
   skills,

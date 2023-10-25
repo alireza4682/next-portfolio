@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import me from "../../public/me.jpg";
 
@@ -21,7 +20,7 @@ export default function LeftLayout({
           />
         </div>
         <div className="">Alireza Arezoumandan</div>
-        <p className="text-sm">Frontend engineer with 5+ years of experience</p>
+        <p className="text-sm">Frontend engineer with 6 years of experience</p>
       </div>
       {leftpage}
     </div>

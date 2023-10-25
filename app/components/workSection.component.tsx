@@ -15,7 +15,7 @@ const WorkSection = () => {
     <div className="p-2">
       <div className="flex flex-row gap-x-8 items-center">
         <h1 className="font-bold m-1">Work experience</h1>
-        <span className="text-xs text-primary">5+ years of experience</span>
+        <span className="text-xs text-primary">6 years of experience</span>
       </div>
       <div className="columns-1 lg:columns-2 gap-8 [&>*]:break-inside-avoid [&>*]:mb-8">
         <Work
