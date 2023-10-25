@@ -27,13 +27,14 @@ export default function LeftPage() {
         <div>6 years experience</div>
       </div>
       <Separator className="mb-10" />
-      <div className="m-2 prose prose-sm prose-h6:text-justify text-foreground">
+      <div className="m-2 prose prose-sm max-w-md dark:prose-invert text-foreground border-border border rounded-sm p-4 shadow-sm font-mono">
         <h6>
-          6 years of experience in JavaScript and 3+ years of experience in
-          Reactjs, TypeScript, Redux and RESTful APIs. 2+ years of experience
-          working with Nextjs, GraphQl and MongoDB. 2+ years of experience
-          working in cross functional environment 2+ years of test driven
-          development. 1+ year of experience working with Nodejs and Expressjs.
+          6 years of experience in <kbd>JavaScript</kbd> and 3+ years of
+          experience in Reactjs, TypeScript, Redux and RESTful APIs. 2+ years of
+          experience working with Nextjs, GraphQl and MongoDB. 2+ years of
+          experience working in cross functional environment 2+ years of test
+          driven development. 1+ year of experience working with Nodejs and
+          Expressjs.
         </h6>
       </div>
       <CvDownload />
