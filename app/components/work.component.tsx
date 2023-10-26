@@ -1,14 +1,5 @@
-import ContentWork from "./content-work.component";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "../../components/ui/card";
-
 import WorkIcon from "./workIcon.componetn";
+import Spotlight from "./spotlight.component";
 
 type Twork = {
   heading: string;
@@ -17,25 +8,22 @@ type Twork = {
   logos: string[];
   className?: string;
 };
-
 const Work = (props: Twork) => {
   const { heading, description, content, logos, className } = props;
-
   return (
-    <Card className={`w-auto h-fit ${className}`}>
-      <CardHeader>
-        <CardTitle>{heading}</CardTitle>
-        <CardDescription>{description}</CardDescription>
-      </CardHeader>
-      <CardContent className="">
-        <ContentWork>{content}</ContentWork>
-      </CardContent>
-      <CardFooter className="flex flex-wrap gap-2">
-        {logos.map((l) => {
-          return <WorkIcon svgIcon={l} key={l} />;
-        })}
-      </CardFooter>
-    </Card>
+    <Spotlight>
+      <div className={`${className}`}>
+        <h1 className="text-2xl font-semibold">{heading}</h1>
+        <h3 className="text-sm mb-4">{description}</h3>
+        <p className="mb-4">{content}</p>
+        <div className="flex flex-wrap gap-2">
+          {logos.map((l) => {
+            return <WorkIcon svgIcon={l} key={l} />;
+          })}
+        </div>
+      </div>
+    </Spotlight>
   );
 };
+
 export default Work;
