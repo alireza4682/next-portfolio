@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import CvDownload from "../../components/cvDownload.component";
@@ -11,8 +13,10 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import { useCopyToClipboard } from "@/app/hooks/useCopyToClipboard";
 
 export default function LeftPage() {
+  const [value, copy] = useCopyToClipboard();
   return (
     <div className=" p-2 flex flex-col items-center sticky top-0 -mt-20">
       <div className="flex flex-row items-center gap-2 text-sm my-1 ">
@@ -45,6 +49,7 @@ export default function LeftPage() {
               <Button
                 className="text-sm flex flex-row items-center gap-4"
                 variant={"link"}
+                onClick={() => copy("alirezaarezoumandan1@gmail.com")}
               >
                 <span>
                   <Mail />
