@@ -15,7 +15,7 @@ const Work = (props: Twork) => {
       <div className={`${className}`}>
         <h1 className="text-2xl font-semibold">{heading}</h1>
         <h3 className="text-sm mb-4">{description}</h3>
-        <p className="mb-4">{content}</p>
+        <div className="mb-4">{content}</div>
         <div className="flex flex-wrap gap-2">
           {logos.map((l) => {
             return <WorkIcon svgIcon={l} key={l} />;

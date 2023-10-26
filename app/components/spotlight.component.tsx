@@ -1,7 +1,6 @@
 "use client";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import { MouseEvent } from "react";
-import { JsxElement } from "typescript";
 
 export default function Spotlight({ children }: { children: React.ReactNode }) {
   let mouseX = useMotionValue(0);
@@ -25,7 +24,7 @@ export default function Spotlight({ children }: { children: React.ReactNode }) {
           background: useMotionTemplate`
             radial-gradient(
               650px circle at ${mouseX}px ${mouseY}px,
-              rgba(14, 165, 233, 0.15),
+              rgba(161, 161, 170, 0.15),
               transparent 80%
             )
           `,
