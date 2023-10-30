@@ -4,7 +4,8 @@ import { useState } from "react";
 import { Button } from "../../components/ui/button";
 import { Separator } from "../../components/ui/seperator";
 import ThemeSwitch from "../components/themeChanger";
-import { AnimatePresence, motion } from "framer-motion";
+import clsx from "clsx";
+import { motion } from "framer-motion";
 
 export default function RightLayout({
   work,
@@ -36,7 +37,27 @@ export default function RightLayout({
                 key={tab.id}
                 className="flex flex-row justify-start gap-1 lg:gap-4 p-2 h-14"
               >
-                <Button onClick={() => setactiveTab(tab.id)} variant="ghost">
+                <Button
+                  onClick={() => setactiveTab(tab.id)}
+                  variant="ghost"
+                  className={`${
+                    activeTab === tab.id ? "" : ""
+                  } relative  transition focus-visible:outline-2`}
+                  style={{
+                    WebkitTapHighlightColor: "transparent",
+                  }}
+                >
+                  {activeTab === tab.id && (
+                    <motion.span
+                      layoutId="bubble"
+                      className="absolute inset-0 z-10 bg-foreground mix-blend-difference rounded-sm"
+                      transition={{
+                        type: "spring",
+                        bounce: 0.2,
+                        duration: 0.6,
+                      }}
+                    />
+                  )}
                   {tab.id}
                 </Button>
                 <Separator orientation="vertical" />
@@ -47,16 +68,7 @@ export default function RightLayout({
         </div>
         <Separator orientation="horizontal" className="my-2" />
       </div>
-      <AnimatePresence initial={false}>
-        <motion.div
-          key={activeTab}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-        >
-          {activeTab === "Work" ? work : skills}
-        </motion.div>
-      </AnimatePresence>
+      <div>{activeTab === "Work" ? work : skills}</div>
     </div>
   );
 }
