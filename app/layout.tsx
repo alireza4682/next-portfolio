@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
+import { GeistSans, GeistMono } from "geist/font";
 import { Providers } from "./components/providers";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning className="scrollbar-hide">
-      <body className={inter.className}>
+      <body className={`${GeistSans.variable} ${GeistMono.variable}`}>
         <Providers>
           <div className="lg:p-16 lg:bg-foreground">
             <div className="grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 bg-background rounded-xl p-8 shadow-2xl">
