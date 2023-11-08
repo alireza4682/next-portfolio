@@ -93,6 +93,14 @@
     --gradient-angle: 0deg;
   }
 }
+@keyframes movingbackground {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(0, -50%);
+  }
+}
 
 @property --gradient-angle {
   syntax: "<angle>"; /* <- defined as type angle for the transition to work */
@@ -120,4 +128,12 @@
     hsla(0, 0%, 100%, 0.3)
   ) !important;
   animation: gradient-rotate 5s linear infinite reverse;
+}
+
+.moving-grid-background {
+  will-change: transform;
+  background-size: 3rem 3rem;
+  background-image: linear-gradient(to right, #8882 1px, transparent 1px),
+    linear-gradient(to bottom, #8882 1px, transparent 1px);
+  animation: movingbackground 90s linear infinite !important;
 }
