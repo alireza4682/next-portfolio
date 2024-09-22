@@ -1,10 +1,6 @@
 content:
   - name: posts
     label: Posts
-    path: src/_posts
+    path: src/
     type: collection
-    
-  - name: authors
-    label: Authors
-    path: src/_data/authors.json
-    type: file
+  
